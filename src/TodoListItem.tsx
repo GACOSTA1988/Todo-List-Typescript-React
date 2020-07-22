@@ -1,5 +1,21 @@
 import React from "react";
 
-export const TodoListItem = (props) => {
-  return <li>Content</li>;
+interface TodoListItemProps {
+  todo: {
+    text: string;
+    complete: boolean;
+  };
+}
+
+export const TodoListItem: React.FunctionComponent<TodoListItemProps> = ({
+  todo,
+}) => {
+  return (
+    <li>
+      <label>
+        <input type="checkbox" checked={todo.complete} />
+        {todo.text}
+      </label>
+    </li>
+  );
 };
