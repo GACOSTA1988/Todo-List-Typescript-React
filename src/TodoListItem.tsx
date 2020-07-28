@@ -1,10 +1,7 @@
 import React from "react";
 
 interface TodoListItemProps {
-  todo: {
-    text: string;
-    complete: boolean;
-  };
+  todo: Todo;
 }
 
 export const TodoListItem: React.FunctionComponent<TodoListItemProps> = ({
